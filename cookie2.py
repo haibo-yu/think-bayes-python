@@ -31,9 +31,13 @@ class Cookie(Pmf):
             self.Mult(hypo, like)
         self.Normalize()
         
-if __name__=='__main__':
+def main():
     hypos = ['Bowl1', 'Bowl2']
     pmf = Cookie(hypos)
     pmf.Update('vanilla')
     for hypo, prob in pmf.Items():
         print hypo, prob
+        
+        
+if __name__=='__main__':
+    main()
